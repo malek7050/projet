@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+
+      <div class="col col-sm-7" *ngFor="let a of articles;let indice=index"  style="margin:2% 0 2% 0 ">
+          <div style="background-color:pink" class="card" >
+              <img [src]="a.photo" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h4 class="card-title">Libellé : {{a.libelle}}</h4>
+                <p class="card-text">
+                  <span><strong>ID:</strong> {{a.identifiant}}</span><br>
+                  <span><strong>Prix :</strong> {{a.prix | currency:' '}} TND</span>
+                </p>
+                <a routerLink="/detail" class="btn btn-danger" (click)="articleDetaille(a)">Read More</a>
+                <a routerLink="/modifier" class="btn btn-danger" (click)="modifier(a)">modifier</a>
+                <a  class="btn btn-danger" routerLink="/samsung" (click)="supprimer(a)">supprimer</a>
+              </div>
+            </div>
+          </div> 
+        </div>
+      </div>

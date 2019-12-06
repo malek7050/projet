@@ -1,0 +1,285 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<div id="top-header">
+  <div class="container">
+    <ul class="header-links pull-left">
+      <li><a href="#"><i class="fa fa-phone"></i> +216-71-698-521</a></li>
+      <li><a href="#"><i class="fa fa-envelope-o"></i> malek-aziz@email.com</a></li>
+      <li><a href="#"><i class="fa fa-map-marker"></i> 1008 charguia city</a></li>
+    </ul>
+    <ul class="header-links pull-right">
+      <li><a href="#"><i class="fa fa-dollar"></i> USD</a></li>
+      <li><a routerLink="/authentification" ><i class="fa fa-user-o"></i> My Account</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- MAIN HEADER -->
+<div id="header">
+    <!-- container -->
+    <div class="container">
+      <!-- row -->
+      <div class="row">
+        <!-- LOGO -->
+        <div class="col-md-3">
+          <div class="header-logo">
+            <a href="#" class="logo">
+              <img img src="/assets/logo.png" alt="">
+            </a>
+          </div>
+        </div>
+        <!-- /LOGO -->
+
+        <!-- SEARCH BAR -->
+        <div class="col-md-6">
+          <div class="header-search">
+            <form>
+              
+              <input class="input" placeholder="Search here" [(ngModel)]="search1">
+              <button routerLink="/recherche"class="search-btn" (click)="rechercher()" >Search</button>
+            </form>
+          </div>
+        </div>
+        <!-- /SEARCH BAR -->
+
+        <!-- ACCOUNT -->
+        <div class="col-md-3 clearfix">
+          <div class="header-ctn">
+            <!-- Wishlist -->
+            <div>
+              <a href="#">
+                <i class="fa fa-heart-o"></i>
+                <span>Your Wishlist</span>
+                <div class="qty">2</div>
+              </a>
+            </div>
+            <!-- /Wishlist -->
+
+            <!-- Cart -->
+            <div class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                <i class="fa fa-shopping-cart"></i>
+                <span>Your Cart</span>
+                <div class="qty">3</div>
+              </a>
+              <div class="cart-dropdown">
+                <div class="cart-list">
+                  <div class="product-widget">
+                    <div class="product-img">
+                      <img src="./img/product01.png" alt="">
+                    </div>
+                    <div class="product-body">
+                      <h3 class="product-name"><a href="#">product name goes here</a></h3>
+                      <h4 class="product-price"><span class="qty">1x</span>$980.00</h4>
+                    </div>
+                    <button class="delete"><i class="fa fa-close"></i></button>
+                  </div>
+
+                  <div class="product-widget">
+                    <div class="product-img">
+                      <img src="./img/product02.png" alt="">
+                    </div>
+                    <div class="product-body">
+                      <h3 class="product-name"><a href="#">product name goes here</a></h3>
+                      <h4 class="product-price"><span class="qty">3x</span>$980.00</h4>
+                    </div>
+                    <button class="delete"><i class="fa fa-close"></i></button>
+                  </div>
+                </div>
+                <div class="cart-summary">
+                  <small>3 Item(s) selected</small>
+                  <h5>SUBTOTAL: $2940.00</h5>
+                </div>
+                <div class="cart-btns">
+                  <a href="#">View Cart</a>
+                  <a href="#">Checkout  <i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+              </div>
+            </div>
+            <!-- /Cart -->
+
+            <!-- Menu Toogle -->
+            <div class="menu-toggle">
+              <a href="#">
+                <i class="fa fa-bars"></i>
+                <span>Menu</span>
+              </a>
+            </div>
+            <!-- /Menu Toogle -->
+          </div>
+        </div>
+        <!-- /ACCOUNT -->
+      </div>
+      <!-- row -->
+    </div>
+    <!-- container -->
+  </div>
+       
+        
+
+
+
+
+      <ul id="ul1" >
+          <li id="li1"><a id="a1" routerLink="/affichage">Home</a></li>
+          <li id="li1"><a id="a1" href="#news">News</a></li>
+          <li  id="li1"><a id="a1" routerLink="/contact">contact</a></li>
+          <li id="li1" style="float:right"><a  id="a1"class="active" routerLink="/contact">About</a></li>
+        </ul>
+
+        <div >
+          <img src="/assets/xx.jpg" alt="dddddddddddddd" style=" display: block; margin-left: auto;margin-right: auto;" width="1000" height="400" >
+   </div> 
+
+      <div style="background-color:rgba(192,192,192,0.3);">
+          <br><br>
+
+         <h1 class="h-headline"class="bg-primary text-white" style=" text-align: center;">Meilleures ventes Smartphone  en Tunisie </h1>
+      <h4   class="bg-danger text-white" style=" text-align: center;">Vous éprouvez quelques difficultés à choisir un nouveau téléphone portable ou smartphone ? Tous les mois Smartec répertorie les meilleures ventes de mobiles chez trois commerçants en ligne. Voici le top pour le mois de septembre 2019.</h4>
+
+
+   
+
+
+
+
+
+
+
+
+<div class="container-fluid">
+ 
+  
+    
+  <div class="row">
+    <div class="col-3">
+      <div  class="nav flex-column nav-pills " id="v-pills-tab" role="tablist" aria-orientation="vertical">
+      <ul class="main-nav nav navbar-nav">
+      <li> <h1><a class="nav-link " data-toggle="pill "   aria-controls="v-pills-profile" aria-selected="false" routerLink="/authentification" routerLinkActive="bg-dark text-white">Login</a></h1></li> 
+      <li> <h2><a class="nav-link " data-toggle="pill"   aria-controls="v-pills-profile" aria-selected="false" routerLink="/affichage" routerLinkActive="bg-dark text-white">Produits</a></h2></li> 
+      <li> <h2><a class="nav-link " data-toggle="pill "  aria-controls="v-pills-profile" aria-selected="true" routerLink="/ajout" routerLinkActive="bg-dark text-white">Ajout</a></h2></li> 
+      <li><h2><a class="nav-link " data-toggle="pill"   aria-controls="v-pills-profile" aria-selected="false" routerLink="/detail" routerLinkActive="bg-dark text-white">Detail</a></h2></li> 
+      <li><h2><a class="nav-link " data-toggle="pill"   aria-controls="v-pills-profile" aria-selected="false" routerLink="/recherche" routerLinkActive="bg-dark text-white">Chercher</a></h2></li>
+      <li><h2><a class="nav-link " data-toggle="pill"   aria-controls="v-pills-profile" aria-selected="false" routerLink="/contact" routerLinkActive="bg-dark text-white">À propos</a></h2></li>
+      </ul>
+      </div>
+    </div>
+   
+    <div class="col-8 rounded-lg border-gradient"style="padding:2% 10% 2% 10%;margin-bottom:2%;">
+      
+<h1   style=" text-align: center"  class="text-success">{{title |pipe1}}</h1>
+  <router-outlet></router-outlet>
+  </div>
+  </div>
+  
+  </div>
+  
+</div>
+
+
+
+
+
+
+  <img src="/assets/horaire.jpg" alt="dddddddddddddd"  width="1500" height="300" >
+ <h3 class="bg-danger text-white" style="text-align: center"> QUI-SOMMES-NOUS?</h3>
+<span class="bg-warning text-white" style="font-size: 25px;"> electro</span> est le premier site tunisien qui propose la vente en ligne  portables,et accessoires.
+
+Commander en ligne chez electro, c'est l'assurance d'avoir une commande livrée  dans les meilleurs délais à l'adresse de votre choix.
+
+  <!-- FOOTER -->
+  <footer id="footer">
+			<!-- top footer -->
+			<div class="section">
+				<!-- container -->
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<div class="col-md-3 col-xs-6">
+							<div class="footer">
+								<h3 class="footer-title">About Us</h3>
+								
+								<ul class="footer-links">
+									<li><a href="#"><i class="fa fa-map-marker"></i>1008 charguia city</a></li>
+									<li><a href="#"><i class="fa fa-phone"></i>216-71-698-521</a></li>
+									<li><a href="#"><i class="fa fa-envelope-o"></i>malek-aziz@email.com</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="col-md-3 col-xs-6">
+							<div class="footer">
+								<h3 class="footer-title">Categories</h3>
+								<ul class="footer-links">
+									<li><a href="#">Hot deals</a></li>
+									<li><a href="#">Laptops</a></li>
+									<li><a href="#">Smartphones</a></li>
+									<li><a href="#">Cameras</a></li>
+									<li><a href="#">Accessories</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="clearfix visible-xs"></div>
+
+						<div class="col-md-3 col-xs-6">
+							<div class="footer">
+								<h3 class="footer-title">Information</h3>
+								<ul class="footer-links">
+									<li><a href="#">About Us</a></li>
+									<li><a href="#">Contact Us</a></li>
+									<li><a href="#">Privacy Policy</a></li>
+									<li><a href="#">Orders and Returns</a></li>
+									<li><a href="#">Terms & Conditions</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="col-md-3 col-xs-6">
+							<div class="footer">
+								<h3 class="footer-title">Service</h3>
+								<ul class="footer-links">
+									<li><a href="#">My Account</a></li>
+									<li><a href="#">View Cart</a></li>
+									<li><a href="#">Wishlist</a></li>
+									<li><a href="#">Track My Order</a></li>
+									<li><a href="#">Help</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- /row -->
+				</div>
+				<!-- /container -->
+			</div>
+			<!-- /top footer -->
+
+			<!-- bottom footer -->
+			<div id="bottom-footer" class="section">
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<ul class="footer-payments">
+								<li><a href="#"><i class="fa fa-cc-visa"></i></a></li>
+								<li><a href="#"><i class="fa fa-credit-card"></i></a></li>
+								<li><a href="#"><i class="fa fa-cc-paypal"></i></a></li>
+								<li><a href="#"><i class="fa fa-cc-mastercard"></i></a></li>
+								<li><a href="#"><i class="fa fa-cc-discover"></i></a></li>
+								<li><a href="#"><i class="fa fa-cc-amex"></i></a></li>
+							</ul>
+							<span class="copyright">
+								Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved 
+							</span>
+						</div>
+					</div>
+						<!-- /row -->
+				</div>
+				<!-- /container -->
+			</div>
+			<!-- /bottom footer -->
+		</footer>
+		<!-- /FOOTER -->

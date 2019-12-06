@@ -1,0 +1,29 @@
+<div *ngIf="login; then message else formulaire" ></div>
+
+<ng-template #formulaire>
+    <form  #f="ngForm" (ngSubmit)="onSubmit(f)" >
+                <h1 class="text-center text-primary">{{title  | titlecase}}</h1>
+                <br>
+                <div class="form-group">
+                        <label for="username">UserName</label>
+                        <input #a="ngModel" type="text" class="form-control" required id="username" name="username"  [(ngModel)]="username">
+                        <div [hidden]="!a.errors?.required || a.pristine" class="alert alert-danger">
+                            Le username est un champ obligatoire
+                            </div>  
+                       
+                                <label for="password">Password</label>
+                        <input #b="ngModel" type="password" class="form-control" required id="password" name="password"  [(ngModel)]="password">
+                        <div [hidden]="!b.errors?.required || b.pristine" class="alert alert-danger">
+                            Le password est un champ obligatoire
+                            </div>
+                        
+                     
+                              
+                  </div>
+                <button   [disabled]="f.invalid" type="submit" class="btn btn-primary" >Submit</button>
+                </form>
+</ng-template>
+<ng-template #message>
+    <h1 style="text-align: center; color :red;">welcome {{_loginInfoService.username | titlecase }}</h1>
+    <button type="button" class="btn btn-danger" (click)="logout()">logout</button>
+</ng-template>

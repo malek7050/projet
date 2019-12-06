@@ -1,0 +1,55 @@
+<div *ngIf="login; then add else message1" ></div>
+
+<ng-template #add>
+<form  #f="ngForm" (ngSubmit)="onSubmit(f)" >
+<div>
+    <h1 class="text-center text-primary">{{title |titlecase}}</h1>
+        <h4 *ngIf="message != ''" >{{message}}</h4>
+    <br>
+    <div class="form-group">
+                <label for="ident">Identifiant</label>
+                <input #a="ngModel" type="text" class="form-control" id="ident" required [(ngModel)]="ident" name="ident">
+                         <div [hidden]="!a.errors?.required || a.pristine" class="alert alert-danger">
+                        Le Identifiant est un champ obligatoire
+                        </div>
+
+                <label for="libel">Libelle</label>
+                <input #b="ngModel" type="text" class="form-control" id="libel" required  [(ngModel)]="libel" name="libel">
+                        <div [hidden]="!b.errors?.required || b.pristine" class="alert alert-danger">
+                        Le libellé est un champ obligatoire
+                        </div>
+
+                <label for="phot">Photo</label>
+                <input #c="ngModel" type="text" class="form-control" id="phot" required  [(ngModel)]="phot" name="phot">
+                        <div [hidden]="!c.errors?.required || c.pristine" class="alert alert-danger">
+                            il faux inserer un chemin pour la photo de produit
+                            </div>
+                <label for="prix">Prix</label>
+                <input  #prix1="ngModel" type="text" class="form-control" id="prix" required pattern="[1-9]+" [(ngModel)]="prix" name="prix">
+
+                  <div *ngIf="prix1.invalid && prix1.dirty" class="alert alert-danger">
+                        Le prix doit être un nombre
+                   </div>
+                <label for="dat">Date de fabrication</label>
+                <input type="date" class="form-control" id="dat" required  [(ngModel)]="dat" name="dat">
+                
+                <label for="dat">Marque</label>
+                <input type="text" class="form-control" id="mrq" required  [(ngModel)]="mrq" name="mrq">
+
+                <br>
+                
+                <input type="checkbox" style="width:20px;height:20px;" id="gar"   [(ngModel)]="gar"/>
+                <label for="gar" style="height:40px;padding:0 0 20px 0">&nbsp;Garantie</label>
+
+                 
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="f.invalid"  >Ajouter</button>
+    <button class="btn btn-danger" (click)="f.resetForm(); submitted =false;">Vider</button>
+</div>
+</form>
+</ng-template>
+
+
+<ng-template #message1>
+    <h1 style="text-align: center;">sorry you need to login to post an article.thanks for your comprehension.</h1>
+</ng-template>

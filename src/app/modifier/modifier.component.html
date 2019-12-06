@@ -1,0 +1,29 @@
+<div class="form-group">
+    <label for="ident">Identifiant</label>
+   <div>   
+    <input type="text" class="form-control" id="ident"  [(ngModel)]="ident">
+
+    <label for="libel">Libelle</label>
+    <input type="text" class="form-control" id="libel"   [(ngModel)]="libel">
+
+    <label for="phot">Photo</label>
+    <input type="text" class="form-control" id="phot"   [(ngModel)]="phot">
+
+    <label for="prix">Prix</label>
+    <input type="number" class="form-control" id="prix"   [(ngModel)]="prix">
+
+    <label for="dat">Date de fabrication</label>
+    <input type="date" class="form-control" id="dat"   [(ngModel)]="dat">
+    
+    <label for="dat">Marque</label>
+    <input type="text" class="form-control" id="mrq"   [(ngModel)]="mrq">
+
+    <br>
+    
+    <input type="checkbox" style="width:20px;height:20px;" id="gar"   [(ngModel)]="gar"/>
+    <label for="gar" style="height:40px;padding:0 0 20px 0">&nbsp;Garantie</label>
+
+     
+</div>
+<button class="btn btn-primary" (click)="verif()">modifier</button>
+<h1 *ngIf="message != ''" >{{message}}</h1>
